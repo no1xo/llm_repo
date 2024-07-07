@@ -21,7 +21,8 @@ vectorstore = FAISS.from_documents(documents,embeddings)
 # Llama 3 modeli yükleyin                                  
 llm = LlamaCpp(model_path="your_llama_3_model_path")
 # RAG uygulamasını oluşturun                               
-qa=RetrievalQA.from_chain_type( llm=llm,retriever=vectorstore.as_retriever(),                      return_source_documents=True,                          )
+qa=RetrievalQA.from_chain.type( 
+llm=llm,retriever=vectorstore.as_retriever(),                    return_source_documents=True )
 # Soru sorun ve yanıt alın
 query = "Soru sorunuz burada"
 answer = qa.run(query)

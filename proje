@@ -1,4 +1,4 @@
-```python
+
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import TextLoader
 from langchain.embeddings import OpenAIEmbeddings
@@ -6,24 +6,25 @@ from langchain.vectorstores import FAISS
 from langchain.llms import LlamaCpp
 
 # Veri yükleyin
-documents =
-TextLoader.from_directory("your_data_directory")
+documents =TextLoader.from_directory("your_data_directory")
 print(documents)
 
 # Embeddings oluşturun
 embeddings = OpenAIEmbeddings()
 
 # Vectorstore oluşturun
-vectorstore = FAISS.from_documents(documents,
-embeddings)
+vectorstore = FAISS.from_documents(documents,embeddings)
 
 # Llama 3 modeli yükleyin
 llm = LlamaCpp(model_path="your_llama_3_model_path")
-                                                           # RAG uygulamasını oluşturun
+                                                           
+# RAG uygulamasını oluşturun
 qa = RetrievalQA.from_chain_type(
     llm=llm,                                                   retriever=vectorstore.as_retriever(),
     return_source_documents=True,
 )
-                                                           # Soru sorun ve yanıt alın
+                                                         
+# Soru sorun ve yanıt alın
 query = "Soru sorunuz burada"
-answer = qa.run(query)                                     print(answer)                                              ```
+answer = qa.run(query)                                  
+print(answer)                                             

@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from langchain_community.llms import Ollama
+import subprocess
 
 app = Flask(__name__)
 gemma2_llm = Ollama(model="gemma2")
@@ -14,4 +15,8 @@ def chat_with_gemma2():
         return jsonify({"error": str(e)})
 
 if __name__ == "__main__":
+    # Başlatmadan önce ngrok'u çalıştırın
+    ngrok_process = subprocess.Popen(["ngrok", "http", "5000"])
     app.run(debug=True)
+    # ngrok'u kapatın
+    ngrok_process.terminate()

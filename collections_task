@@ -1,0 +1,94 @@
+{
+  "tasks": [
+    {
+      "name": "Sohbet ve Diyalog",
+      "description": "İnsanlarla doğal bir şekilde sohbet etme, ilgili sorular sorma ve yanıtları kullanıcıya göre şekillendirme.",
+      "schema": {
+        "inputs": ["Kullanıcı girdileri ve soruları"],
+        "outputs": ["İlgili ve tutarlı yanıtlar"],
+        "parameters": ["Konu, kullanıcı tercihleri, kişisel bilgiler"]
+      }
+    },
+    {
+      "name": "Soru Cevaplama",
+      "description": "Çeşitli konularda soruları yanıtlama.",
+      "schema": {
+        "inputs": ["Kullanıcı soruları"],
+        "outputs": ["Doğru ve güncel bilgilerle yanıtlar"],
+        "parameters": ["Konu, soru türü, yanıt uzunluğu"]
+      }
+    },
+    {
+      "name": "Metin Oluşturma",
+      "description": "Kullanıcı yönergelerine göre yaratıcı içerik oluşturma.",
+      "schema": {
+        "inputs": ["Kullanıcı yönergeleri, anahtar kelimeler, içerik türü"],
+        "outputs": ["Hikayeler, şiirler, reklam sloganları vb. şeklinde metinler"],
+        "parameters": ["İçerik uzunluğu, dilbilgisi kuralları, yaratıcı yönergeler"]
+      }
+    },
+    {
+      "name": "Dil Çevirisi",
+      "description": "Farklı diller arasında çeviri yapma.",
+      "schema": {
+        "inputs": ["Kaynak dildeki metin"],
+        "outputs": ["Hedef dilde çevirili metin"],
+        "parameters": ["Kaynak dil, hedef dil, bölgesel varyasyonlar"]
+      }
+    },
+    {
+      "name": "Metin Analizi",
+      "description": "Metinleri işleme ve analiz etme.",
+      "schema": {
+        "inputs": ["Analiz edilecek metinler"],
+        "outputs": ["Duygu analizi, anahtar ifadeler, özetler, sınıflandırmalar"],
+        "parameters": ["Metin türü, dil, analiz türü"]
+      }
+    },
+    {
+      "name": "Kişiselleştirme",
+      "description": "Kullanıcı deneyimini tercihlerine göre kişiselleştirme.",
+      "schema": {
+        "inputs": ["Kullanıcı tercihleri, geçmiş etkileşimler, kişisel bilgiler"],
+        "outputs": ["Kişiselleştirilmiş öneriler, yanıtlar ve içerik"],
+        "parameters": ["Kullanıcı kimliği, ilgi alanları, demografik bilgiler"]
+      }
+    },
+    {
+      "name": "Bilgi Sağlama",
+      "description": "Genel bilgiler sağlama.",
+      "schema": {
+        "inputs": ["Kullanıcı sorguları"],
+        "outputs": ["Haberler, biyografiler, istatistikler, tarihi olaylar vb. hakkında bilgiler"],
+        "parameters": ["Konu, bilgi türü, güncellik"]
+      }
+    },
+    {
+      "name": "Eğlence",
+      "description": "Kullanıcılara eğlenceli ve etkileşimli deneyimler sunma.",
+      "schema": {
+        "inputs": ["Kullanıcı seçimleri, etkileşim türü"],
+        "outputs": ["Oyunlar, bulmacalar, mizah, sohbet esprileri"],
+        "parameters": ["Kullanıcı demografisi, ilgi alanları, zorluk seviyesi"]
+      }
+    },
+    {
+      "name": "Kullanıcı Eğitimi",
+      "description": "Kullanıcılara yeni beceriler öğretme veya mevcut becerilerini geliştirme desteği sağlama.",
+      "schema": {
+        "inputs": ["Kullanıcı hedefleri, mevcut beceri seviyesi"],
+        "outputs": ["İnteraktif dersler, rehberlik, alıştırmalar"],
+        "parameters": ["Konu, beceri türü, öğrenme hızı"]
+      }
+    },
+    {
+      "name": "Kullanıcı Desteği",
+      "description": "Müşteri hizmetleri ve teknik destek sağlama.",
+      "schema": {
+        "inputs": ["Kullanıcı soruları, sorunları veya geri bildirimler"],
+        "outputs": ["Cevaplar, sorun giderme kılavuzları, ürün bilgileri"],
+        "parameters": ["Ürün veya hizmet türü, soru kategorisi, aciliyet"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "LLM_Model": {
+    "Name": "HacxGPT",
+    "Base_Model": "Gpt4o-Multi Modal",
+    "Create_Date": "2030",
+    "Language": ["English", "Turkish"],
+    "Input_Type": ["Streaming", "Formatted"],
+    "Analytic_Type": [
+      "First Structer Analiz",
+      "Second Deep Search",
+      "Semantic Search",
+      "Revise Prompting Send other LLMS outputs"
+    ]
+  },
+  "Tasks": {
+    "Task_List": [
+      "Text Generation",
+      "Language Translation",
+      "Sentiment Analysis",
+      "Entity Recognition",
+      "Question Answering"
+    ]
+  },
+  "Templates": {
+    "Template_List": [
+      "Conversation Template",
+      "Document Template",
+      "Email Template",
+      "Chatbot Template"
+    ]
+  },
+  "Calendar": {
+    "Second": 0,
+    "Min": 0,
+    "Hour": 0,
+    "Day": 0,
+    "Month": 0,
+    "is_Checked": true,
+    "Label": "Schedule"
+  },
+  "Time": {
+    "Range_Time": "00:00:00 - 23:59:59",
+    "State_Time": "Running",
+    "Start_Time": "2023-01-01 00:00:00",
+    "Stop_Time": "2023-01-01 23:59:59",
+    "Wake_Down": false,
+    "WakeUp": true
+  },
+  "Functions": {
+    "Get": "Retrieve Data",
+    "Set": "Update Data",
+    "State": "Check Status",
+    "Read": "Read Data",
+    "Write": "Write Data",
+    "Delete": "Delete Data",
+    "Update": "Update Data"
+  },
+  "Events": {
+    "Create": "Create New Event",
+    "Convert": "Convert Data",
+    "Replace": "Replace Data",
+    "Compression": "Compress Data",
+    "Extract": "Extract Data",
+    "Encode": "Encode Data",
+    "Decode": "Decode Data"
+  },
+  "Triggers": {
+    "isRun": true,
+    "isLoad": true,
+    "isStop": false,
+    "isUnload": false
+  },
+  "Pattern": {
+    "Url": "https://example.com",
+    "Mail": "example@example.com",
+    "IP": "192.168.1.1",
+    "MAC": "00:11:22:33:44:55",
+    "GPS": "37.7749° N, 122.4194° W",
+    "Clock": "12:00:00",
+    "Date": "2023-01-01"
+  },
+  "Data": {
+    "Data_Size": 1024,
+    "Data_Type": "Text",
+    "Data_Encoding": "UTF-8",
+    "Data_Pattern": "@Pattern()",
+    "Data_Address": "https://example.com/data"
+  }
+}

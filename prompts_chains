@@ -1,0 +1,90 @@
+{
+  "Prompt_Chain": {
+    "Name": "System_Prompts",
+    "Description": "System prompts for LLM model",
+    "Prompts": [
+      {
+        "Prompt": "What is the current time?",
+        "Response": "The current time is {{Time}}",
+        "Function": "Get_Current_Time"
+      },
+      {
+        "Prompt": "What is the current date?",
+        "Response": "The current date is {{Date}}",
+        "Function": "Get_Current_Date"
+      },
+      {
+        "Prompt": "What is the current weather?",
+        "Response": "The current weather is {{Weather}}",
+        "Function": "Get_Current_Weather"
+      },
+      {
+        "Prompt": "What is the current news?",
+        "Response": "The current news is {{News}}",
+        "Function": "Get_Current_News"
+      }
+    ]
+  },
+  "Functions": {
+    "Get_Current_Time": {
+      "Code": "return new Date().toLocaleTimeString();"
+    },
+    "Get_Current_Date": {
+      "Code": "return new Date().toLocaleDateString();"
+    },
+    "Get_Current_Weather": {
+      "Code": "return fetch('https://api.openweathermap.org/data/2.5/weather?q=London,UK').then(response => response.json()).then(data => data.weather[0].description);"
+    },
+    "Get_Current_News": {
+      "Code": "return fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_API_KEY').then(response => response.json()).then(data => data.articles[0].title);"
+    }
+  },
+  "Vector_Store": {
+    "Name": "System_Vectors",
+    "Description": "System vectors for LLM model",
+    "Vectors": [
+      {
+        "Vector": "Time_Vector",
+        "Description": "Vector for current time",
+        "Values": ["hour", "minute", "second"]
+      },
+      {
+        "Vector": "Date_Vector",
+        "Description": "Vector for current date",
+        "Values": ["year", "month", "day"]
+      },
+      {
+        "Vector": "Weather_Vector",
+        "Description": "Vector for current weather",
+        "Values": ["temperature", "humidity", "wind_speed"]
+      },
+      {
+        "Vector": "News_Vector",
+        "Description": "Vector for current news",
+        "Values": ["title", "description", "url"]
+      }
+    ]
+  },
+  "Sync_Connection": {
+    "Name": "System_Sync",
+    "Description": "System sync connection for LLM model",
+    "Functions": [
+      {
+        "Function": "Sync_Time",
+        "Code": "return syncTime();"
+      },
+      {
+        "Function": "Sync_Date",
+        "Code": "return syncDate();"
+      },
+      {
+        "Function": "Sync_Weather",
+        "Code": "return syncWeather();"
+      },
+      {
+        "Function": "Sync_News",
+        "Code": "return syncNews();"
+      }
+    ]
+  }
+}

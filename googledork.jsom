@@ -1,0 +1,131 @@
+{
+  "title": "Google Dork Categories and Syntax",
+  "categories": [
+    {
+      "name": "File Type Specific",
+      "description": "Find files of a specific type (e.g., PDF, DOC, XLS)",
+      "dorks": [
+        {
+          "syntax": "filetype:pdf",
+          "description": "Find PDF files",
+          "examples": [
+            "filetype:pdf intitle:'index of'",
+            "filetype:pdf inurl:'report'"
+          ]
+        },
+        {
+          "syntax": "filetype:doc",
+          "description": "Find Microsoft Word documents",
+          "examples": [
+            "filetype:doc intitle:'financial report'"
+          ]
+        },
+        {
+          "syntax": "filetype:xls",
+          "description": "Find Microsoft Excel spreadsheets",
+          "examples": [
+            "filetype:xls inurl:'data'"
+          ]
+        },
+        // ... Add more file types (e.g., zip, txt, etc.)
+      ]
+    },
+    {
+      "name": "Website Specific",
+      "description": "Target searches to specific websites or domains",
+      "dorks": [
+        {
+          "syntax": "site:example.com",
+          "description": "Search only within the example.com domain",
+          "examples": [
+            "site:example.com intitle:'login'"
+          ]
+        },
+        {
+          "syntax": "site:*.example.com",
+          "description": "Search within all subdomains of example.com",
+          "examples": [
+            "site:*.example.com intext:'sensitive data'"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Content Specific",
+      "description": "Target searches based on content keywords or phrases",
+      "dorks": [
+        {
+          "syntax": "intitle:'keyword'",
+          "description": "Find pages with 'keyword' in the title",
+          "examples": [
+            "intitle:'login page'"
+          ]
+        },
+        {
+          "syntax": "inurl:'keyword'",
+          "description": "Find pages with 'keyword' in the URL",
+          "examples": [
+            "inurl:'admin'"
+          ]
+        },
+        {
+          "syntax": "intext:'keyword'",
+          "description": "Find pages with 'keyword' in the text",
+          "examples": [
+            "intext:'database backup'"
+          ]
+        },
+        {
+          "syntax": "allintitle:'keyword'",
+          "description": "Find pages with 'keyword' in the entire title",
+          "examples": [
+            "allintitle:'employee database'"
+          ]
+        },
+        {
+          "syntax": "allinurl:'keyword'",
+          "description": "Find pages with 'keyword' in the entire URL",
+          "examples": [
+            "allinurl:'admin.php'"
+          ]
+        },
+        {
+          "syntax": "allintext:'keyword'",
+          "description": "Find pages with 'keyword' in the entire page text",
+          "examples": [
+            "allintext:'secret key'"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Advanced Operators",
+      "description": "Use advanced operators for more targeted searches",
+      "dorks": [
+        {
+          "syntax": "related:example.com",
+          "description": "Find websites similar to example.com",
+          "examples": [
+            "related:example.com intitle:'login'"
+          ]
+        },
+        {
+          "syntax": "cache:example.com",
+          "description": "Show the cached version of the example.com website",
+          "examples": [] // No typical examples, used for specific cases
+        },
+        {
+          "syntax": "link:example.com",
+          "description": "Find pages that link to example.com",
+          "examples": [] // No typical examples, used for specific cases
+        },
+        {
+          "syntax": "info:example.com",
+          "description": "Show information about the example.com website",
+          "examples": [] // No typical examples, used for specific cases
+        }
+      ]
+    }
+    // ... Add more categories as needed
+  ]
+}

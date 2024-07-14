@@ -61,3 +61,16 @@ def create_sound2text_model():
 text2text_model, text2text_tokenizer = create_text2text_model()
 image2text_model = create_image2text_model()
 sound2text_model = create_sound2text_model()
+
+
+
+import librosa
+
+def extract_mfcc(file_path):
+    y, sr = librosa.load(file_path)
+    mfccs = mfcc(y, sr)
+    return mfccs.T
+
+# Example usage:
+mfccs = extract_mfcc("path/to/audio.wav")
+sound2text_model.predict(mfccs[None, ...])

@@ -1,0 +1,28 @@
+**Syntax Pattern (English):**
+
+```
+objectName := ObjectType[argument1, argument2, ...]
+matrixName := Matrix[[value1, value2, ...], [value3, value4, ...]]
+vectorName := Vector[value1, value2, ...]
+resultMatrix := matrix1 operator matrix2
+resultVector := vector1 operator vector2
+objectName.methodName(argument1, argument2, ...)
+import frameworkName
++   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+^   Exponentiation
+||  Matrix multiplication
+.   Dot product (vectors only)
+```
+
+**Example Usage:**
+
+```
+import numpy
+
+matrix1 = Matrix([[1, 2, 3], [4, 5, 6]])
+matrix2 = Matrix([[7, 8, 9], [10, 11, 12]])
+resultMatrix = matrix1 + matrix2
+```

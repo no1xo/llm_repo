@@ -1,0 +1,89 @@
+
+
+Degişkenler
+
+[[ let x := 5 ]]
+[[ let y := 10 ]]
+[[ let z := x + y ]]
+
+fonksiyon
+[[ fn add(a, b) => 
+    [[ return a + b ]]
+]]
+
+[[ let result := add(3, 7) ]]
+
+
+şart ve kontrol
+
+[[ if [x > y] then 
+    [[ print("x is greater") ]]
+  else 
+    [[ print("y is greater") ]]
+]]
+
+
+Döngü
+
+[[ let i := 0 ]]
+
+[[ loop [i < 5] do 
+    [[ 
+        print(i)
+        let i := i + 1
+    ]]
+]]
+
+
+
+## Bu, Boxy dilinde bir örnek koddur
+[[ let i := 0 ]]
+
+## Fonksiyon tanımlama
+[[ fn add(a, b) => 
+    [[ return a + b ]]
+]]
+
+## Döngü ile sayıları yazdırma
+[[ loop [i < 10] do 
+    [[ 
+        print(i) 
+        let i := i + 1 
+    ]]
+]]
+
+## Koşul ifadeleri
+[[ if [i == 10] then 
+    [[ print("i is now 10") ]]
+  else 
+    [[ print("i is not 10 yet") ]]
+]]
+
+
+## Matrix tanımlama
+[[ let A := [[1, 2, 3], [4, 5, 6], [7, 8, 9]] ]]
+[[ let B := [[9, 8, 7], [6, 5, 4], [3, 2, 1]] ]]
+
+
+## Matrix toplama fonksiyonu
+[[ fn matrix_add(A, B) => 
+    [[ 
+        let result := []
+        for i in range(len(A)):
+            [[
+                let row := []
+                for j in range(len(A[0])):
+                    [[
+                        row.append(A[i][j] + B[i][j])
+                    ]]
+                result.append(row)
+            ]]
+        return result 
+    ]]
+]]
+
+## Matrix toplama işlemi
+[[ let C := matrix_add(A, B) ]]
+
+
+

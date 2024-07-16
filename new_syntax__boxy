@@ -85,5 +85,105 @@ Döngü
 ## Matrix toplama işlemi
 [[ let C := matrix_add(A, B) ]]
 
+## Matrix çarpma fonksiyonu
+[[ fn matrix_multiply(A, B) =>     [[         let result := [[0 for _ in range(len(B[0]))] for _ in range(len(A))]
+        for i in range(len(A)):
+            [[                for j in range(len(B[0])):
+                    [[                        for k in range(len(B)):                            [[                                result[i][j] += A[i][k] * B[k][j]
+                            ]]
+                    ]]
+            ]]
+        return result 
+    ]]
+]]
+
+## Matrix çarpma işlemi
+[[ let D := matrix_multiply(A, B) ]]
+## Matrix transpoz fonksiyonu
+[[ fn matrix_transpose(A) =>     [[         let result := [[0 for _ in range(len(A))] for _ in range(len(A[0]))]
+        for i in range(len(A)):
+            [[                for j in range(len(A[0])):
+                    [[                        result[j][i] = A[i][j]
+                    ]]
+            ]]
+        return result 
+    ]]
+]]
+
+## Matrix transpoz işlemi
+[[ let E := matrix_transpose(A) ]]
+
+python ile kullanımı
+
+[[ import numpy as np ]]
+## NumPy kullanarak matrix tanımlama
+[[ let A := np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) ]]
+[[ let B := np.array([[9, 8, 7], [6, 5, 4], [3, 2, 1]]) ]]
+
+## Matrix toplama
+[[ let C := np.add(A, B) ]]
+
+## Matrix çarpma
+[[ let D := np.dot(A, B) ]]
+
+## Matrix transpoz
+[[ let E := np.transpose(A) ]]
+
+[[ import pandas as pd ]]
+
+## Pandas kullanarak DataFrame tanımlama
+[[ let df := pd.DataFrame({
+    'A': [1, 2, 3],
+    'B': [4, 5, 6],
+    'C': [7, 8, 9]
+}) ]]
+
+## DataFrame sütun ekleme
+[[ df['D'] := df['A'] + df['B'] ]]
+
+## DataFrame filtreleme
+[[ let filtered_df := df[df['A'] > 1] ]]
+
+
+[[ class Person ]]
+    [[ let name := "" ]]
+    [[ let age := 0 ]]
+    
+    [[ fn __init__(self, name, age) => 
+        [[ self.name := name ]]
+        [[ self.age := age ]]
+    ]]
+    
+    [[ fn greet(self) => 
+        [[ print(f"Hello, my name is {self.name} and I am {self.age} years old.") ]]
+    ]]
+
+## Person sınıfından bir nesne oluşturma
+[[ let john := Person("John", 30) ]]
+[[ john.greet() ]]
+
+
+[[ class Employee extends Person ]]
+    [[ let employee_id := 0 ]]
+    
+    [[ fn __init__(self, name, age, employee_id) => 
+        [[ super().__init__(name, age) ]]
+        [[ self.employee_id := employee_id ]]
+    ]]
+    
+    [[ fn show_employee_id(self) => 
+        [[ print(f"My employee ID is {self.employee_id}") ]]
+    ]]
+
+
+## Employee sınıfından bir nesne oluşturma
+[[ let jane := Employee("Jane", 28, 1234) ]]
+[[ jane.greet() ]]
+[[ jane.show_employee_id() ]]
+
+
+
+
+
 
 

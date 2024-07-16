@@ -1,0 +1,161 @@
+{
+  "semantic_language": {
+    "version": "1.0",
+    "vocabulary": {
+      "words": [
+        "evet",
+        "hayır",
+        "belki",
+        "sanırım",
+        "bilmiyorum",
+        "mutlaka",
+        "asla",
+        "kesinlikle",
+        "mümkün",
+        "imkansız"
+      ],
+      "tags": [
+        "onay",
+        "red",
+        "belirsizlik",
+        "tahmin",
+        "bilgi eksikliği",
+        "zorunluluk",
+        "inkar",
+        "kesinlik",
+        "olasılık",
+        "imkansızlık"
+      ]
+    },
+    "syntax": {
+      "sentences": {
+        "structure": [
+          {
+            "type": "subject",
+            "required": true,
+            "repeatable": false,
+            "tokens": [
+              {
+                "type": "noun",
+                "required": true,
+                "repeatable": false
+              },
+              {
+                "type": "adjective",
+                "required": false,
+                "repeatable": true
+              }
+            ]
+          },
+          {
+            "type": "verb",
+            "required": true,
+            "repeatable": false,
+            "tokens": [
+              {
+                "type": "verb",
+                "required": true,
+                "repeatable": false
+              },
+              {
+                "type": "adverb",
+                "required": false,
+                "repeatable": true
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "required": true,
+            "repeatable": false,
+            "tokens": [
+              {
+                "type": "noun",
+                "required": true,
+                "repeatable": false
+              },
+              {
+                "type": "adjective",
+                "required": false,
+                "repeatable": true
+              }
+            ]
+          }
+        ]
+      },
+      "questions": {
+        "structure": [
+          {
+            "type": "question_word",
+            "required": true,
+            "repeatable": false,
+            "tokens": [
+              {
+                "type": "noun",
+                "required": true,
+                "repeatable": false
+              }
+            ]
+          },
+          {
+            "type": "verb",
+            "required": true,
+            "repeatable": false,
+            "tokens": [
+              {
+                "type": "verb",
+                "required": true,
+                "repeatable": false
+              }
+            ]
+          },
+          {
+            "type": "subject",
+            "required": true,
+            "repeatable": false,
+            "tokens": [
+              {
+                "type": "noun",
+                "required": true,
+               SUhli": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "semantics": {
+      "word_associations": {
+        "evet": "onay",
+        "hayır": "red",
+        "belki": "belirsizlik",
+        "sanırım": "tahmin",
+        "bilmiyorum": "bilgi eksikliği",
+        "mutlaka": "zorunluluk",
+        "asla": "inkar",
+        "kesinlikle": "kesinlik",
+        "mümkün": "olasılık",
+        "imkansız": "imkansızlık"
+      },
+      "sentence_structure": {
+        "subject": {
+          "noun": "konu",
+          "adjective": "sıfat"
+        },
+        "verb": {
+          "verb": "fiil",
+          "adverb": "zarf"
+        },
+        "object": {
+          "noun": "nesne",
+          "adjective": "sıfat"
+        }
+      },
+      "question_structure": {
+        "question_word": "soru kelimesi",
+        "verb": "fiil",
+        "subject": "konu"
+      }
+    }
+  }
+}
